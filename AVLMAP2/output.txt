@@ -1,0 +1,108 @@
+-----------------------------------------------------------
+Creating a map of type <int(key),string(value)> with keys 1-5
+
+-----------------------------------------------------------
+Demonstrating using iterators begin() and end() to print all values in the map 
+
+it.first()-> 1 it->second()->   HE1
+
+it.first()-> 2 it->second()->   2He
+
+it.first()-> 3 it->second()->   H3e
+
+it.first()-> 4 it->second()->   He4
+
+it.first()-> 5 it->second()->   He5
+
+-----------------------------------------------------------
+Trying to use find on key 3. Find returns an iterator to that key so we can call second() to show the value
+H3e
+-----------------------------------------------------------
+Demonstrating erase on key 1
+-----------------------------------------------------------
+
+Demonstrating size() function
+4
+-----------------------------------------------------------
+
+Demonstrating at function for key 3, it returns the value of the key if found, exception if not 
+H3e
+Demonstrating at function for key 300, should throw but we will catch it 
+
+EXCEPTION CAUGHT
+-----------------------------------------------------------
+
+Demonstrating copy constructor, creating map b with the values of map t and printing the values
+-----------------------------------------------------------
+Map b iterator->first() , iterator->second()
+
+it.first()-> 2 it->second()->   2He
+
+it.first()-> 3 it->second()->   H3e
+
+it.first()-> 4 it->second()->   He4
+
+it.first()-> 5 it->second()->   He5
+-----------------------------------------------------------
+
+Demonstrating assignment operator Map g = t (our first map) and printing values
+Map g iterator->first() , iterator->second()
+-----------------------------------------------------------
+
+it.first()-> 2 it->second()->   2He
+
+it.first()-> 3 it->second()->   H3e
+
+it.first()-> 4 it->second()->   He4
+
+it.first()-> 5 it->second()->   He5
+-----------------------------------------------------------
+
+Demonstrating empty() function on map b
+0
+-----------------------------------------------------------
+
+Demonstrating count() function on map b key 4(which was deleted)
+1
+-----------------------------------------------------------
+
+Demonstrating equals operator on the two maps 
+1
+-----------------------------------------------------------
+
+Demonstrating not equals operator on the two maps 
+0
+-----------------------------------------------------------
+
+Demonstrating creation of constant iterators and their preincrement operator 
+printing second() pointed by constant iterator const_it which is cbegin() of map b
+2He
+Using ++const_it and printing second again
+H3e
+-----------------------------------------------------------
+
+Demonstrating swap() 
+Erasing key 5 from t and swapping it with map b, which has key 5
+Printing map t. It should have key 5 in it because it is swapped with map b
+
+it.first()-> 2 it->second()->   2He
+
+it.first()-> 3 it->second()->   H3e
+
+it.first()-> 4 it->second()->   He4
+
+it.first()-> 5 it->second()->   He5
+-----------------------------------------------------------
+
+Demonstrating erase with providing iterator to fifth element 
+
+it.first()-> 2 it->second()->   2He
+
+it.first()-> 3 it->second()->   H3e
+
+it.first()-> 4 it->second()->   He4
+BENCH MARKING---------------------
+stdMAP took : 0.218to insert 10000 elements 
+MyMAP took : 7.105to insert 10000 elements 
+stdMAP took : 0.006to clear 10000 elements 
+myMAP took : 0.003to clear 10000 elements 
